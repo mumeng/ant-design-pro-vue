@@ -15,7 +15,7 @@ import CountDown from '@/components/CountDown'
 import Ellipsis from '@/components/Ellipsis'
 import FooterToolbar from '@/components/FooterToolbar'
 import NumberInfo from '@/components/NumberInfo'
-import DetailList from '@/components/tools/DetailList'
+import DescriptionList from '@/components/DescriptionList'
 import Tree from '@/components/Tree/Tree'
 import Trend from '@/components/Trend'
 import STable from '@/components/table'
@@ -39,7 +39,9 @@ export {
   Ellipsis,
   FooterToolbar,
   NumberInfo,
-  DetailList,
+  DescriptionList,
+  // 兼容写法，请勿继续使用
+  DescriptionList as DetailList,
   Tree,
   STable,
   MultiTab,

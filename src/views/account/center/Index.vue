@@ -96,7 +96,7 @@
 </template>
 
 <script>
-import PageLayout from '@/components/page/PageLayout'
+import { PageView } from '@/layouts'
 import RouteView from '@/layouts/RouteView'
 import { AppPage, ArticlePage, ProjectPage } from './page'
 
@@ -105,7 +105,7 @@ import { mapGetters } from 'vuex'
 export default {
   components: {
     RouteView,
-    PageLayout,
+    PageView,
     AppPage,
     ArticlePage,
     ProjectPage
