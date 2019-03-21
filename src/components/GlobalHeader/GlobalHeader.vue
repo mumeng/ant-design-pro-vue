@@ -28,6 +28,7 @@ import SMenu from '../menu/'
 import Logo from '../tools/Logo'
 
 import { mixin } from '@/utils/mixin'
+import { handleScrollHeader } from '@/utils/util'
 
 export default {
   name: 'GlobalHeader',
@@ -69,16 +70,19 @@ export default {
     }
   },
   mounted () {
-    window.addEventListener('scroll', this.handleScroll)
+    const _this = this
+    handleScrollHeader(direction => {
+      _this.handleScroll(direction)
+    })
   },
   methods: {
-    handleScroll () {
+    handleScroll (direction) {
       if (this.autoHideHeader) {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-        if (scrollTop > 100) {
-          this.headerBarFixed = true
-        } else {
+        if (direction === 'up') {
           this.headerBarFixed = false
+        } else {
+          scrollTop > 100 && (this.headerBarFixed = true)
         }
       } else {
         this.headerBarFixed = false
