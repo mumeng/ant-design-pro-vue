@@ -24,7 +24,7 @@
 
 <script>
 import UserMenu from '../tools/UserMenu'
-import SMenu from '../menu/'
+import SMenu from '../Menu/'
 import Logo from '../tools/Logo'
 
 import { mixin } from '@/utils/mixin'
